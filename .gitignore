@@ -1,0 +1,8 @@
+/mod_nn_train.mod
+/mod_setup.mod
+/mod_score_bas.mod
+mod_score_basis.mod
+mod_open_input.mod
+/mod_save_ann.mod
+/mod_scan_basis.mod
+/mod_score_bot.mod

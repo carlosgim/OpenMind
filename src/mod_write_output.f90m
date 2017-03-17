@@ -1,0 +1,32 @@
+module mod_write_output
+
+!================================================================================!
+! Write Output module for OpenMind
+!================================================================================!
+!
+!================================================================================!
+
+! Open File
+! =========
+
+implicit none
+
+    integer :: giUNITDEBUG = 101
+
+    public:: sWrite_Debug
+
+contains
+
+subroutine sWrite_Debug
+
+     open(unit=giUNITDEBUG, file='AI_Debug.out')
+
+     write(giUNITDEBUG,*) "Debug File"
+
+end subroutine sWrite_Debug
+
+!end program mod_open_input
+
+
+
+end module mod_write_output
