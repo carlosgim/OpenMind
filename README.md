@@ -20,26 +20,17 @@ tracking requests and bugs.
 
 ## Installation
 
-For install OpenMind you need to run the *make* program
-
 ```shell
-make
-```
-
-## Run Test
-
-You can run test with
-
-```shell
-python run_test.py
+python setup.py
 ```
 
 Where you have the follow options:
 
-0. Install and Train: This option install and run and example test (see examples).
-1. Score data basis: This option just run the last ANN saved and allow to score a basis set.
-2. Clean test folder: Clean the environment.
-3. Debug: Run test and save some variables in temporal file.
+0. Install (the binary go to /bin folder)
+1. Run Test: This option run and example test (see examples).
+2. Score data basis: This option just run the last ANN saved and allow to score a basis set.
+3. Clean test folder: Clean the environment.
+4. Debug: Run test and save some variables in temporal file.
 
 ## Run arbitrary basis set
 

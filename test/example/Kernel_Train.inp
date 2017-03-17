@@ -24,4 +24,4 @@ iris.csv
 *OUTPUT NAME
 Basis_Train_scored.csv
 *DEBUG
-.TRUE.
+.FALSE.

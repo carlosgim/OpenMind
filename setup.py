@@ -22,13 +22,15 @@ class kind_run(object):
 
         print("Choose what kind of run you want...")
 
-        print("0 - Train Neural Network")
+        print("0 - Install")
 
-        print("1 - Score data basis")
+        print("1 - Run Test")
 
-        print("2 - Clean test folder")
+        print("2 - Score data basis")
 
-        print("3 - Debug")
+        print("3 - Clean test folder")
+
+        print("4 - Debug")
 
         gkind = input("What is your election?")
 
@@ -42,11 +44,23 @@ class kind_run(object):
 
         if (self.gkind == "0"):
 
-            print(" Training Neural Network... ")
+            print(" Installing... ")
 
             set_enviroment().__clean_out__()
 
             compile_code()
+
+            print("Correctly instaled...")
+
+        elif (self.gkind == "1"):
+
+            print(" Running Test... ")
+
+            set_enviroment().__clean_out__()
+
+            compile_code()
+
+            print("Correctly instaled...")
 
             self.test_path = os.getcwd() + "/test/run_test"
 
@@ -54,26 +68,33 @@ class kind_run(object):
 
             run_test().__test_kind__(self.gkind)
 
-        elif (self.gkind == "1"):
+        elif (self.gkind == "2"):
 
             print(" Scoring data basis...")
 
             run_test().__test_kind__(self.gkind)
 
+        #elif (self.gkind == "3"):
 
-        elif (self.gkind == "2"):
+        #   print(" Scoring as BOT...")
+
+        #    run_test().__test_kind__(self.gkind)
+
+        elif (self.gkind == "3"):
 
             print(" Cleaning folder...")
 
             set_enviroment().__clean_out__()
 
-        else:
+        elif (self.gkind == "4"):
 
             print(" Debugging: Training Neural Network...")
 
             set_enviroment().__clean_out__()
 
             compile_code()
+
+            print("Correctly instaled...")
 
             self.test_path = os.getcwd() + "/test/run_test"
 
@@ -147,55 +168,33 @@ class set_enviroment(object):
 
         example_path = os.getcwd() + "/test/example/"
 
-        if (self.kind == "0"):
+        if (self.kind == "1"):
 
             shutil.copy(example_path + "Kernel_Train.inp", test_path+"/Kernel.inp") 
 
             shutil.copy(example_path + "iris.csv", test_path)
 
-        elif (self.kind == "1"):
+        elif (self.kind == "2"):
 
             if os.path.exists(test_path+"\iris_scored.csv"):
 
-                os.remove(test_path+"\iris_scored.csv")	
+                os.remove(test_path+"\iris_scored.csv")
 
             shutil.copy(example_path + "Kernel_Basis.inp", test_path+"/Kernel.inp") 
 
             shutil.copy(example_path + "iris.csv", test_path)
 
-        elif (self.kind == "3"):
-        
-            shutil.copy(example_path + "Kernel_BOT.inp", test_path+"/Kernel.inp") 
+        elif (self.kind == "4"):
 
-            shutil.copy(example_path + "registro_1.csv", test_path)
+            if os.path.exists(test_path+"\iris_scored.csv"):
 
-            shutil.copy(example_path + "registro_2.csv", test_path)
-
-            shutil.copy(example_path + "registro_3.csv", test_path)
-
-            shutil.copy(example_path + "registro_4.csv", test_path)
-
-            shutil.copy(example_path + "registro_5.csv", test_path)
-
-            print("BOT")
-
-        else:
+                os.remove(test_path+"\iris_scored.csv")
 
             shutil.copy(example_path + "Kernel_Train_debug.inp", test_path+"/Kernel.inp") 
 
             shutil.copy(example_path + "iris.csv", test_path)
 
-            print("Debugging")
-
     def __clean_out__(self):
-
-        print("Cleaning bin...")
-
-        self.bin_path = os.getcwd() + "/bin/NN_Kernel.exe"
-
-        if path.isfile(self.bin_path):
-
-            os.remove(self.bin_path)
 
         print("Cleaning test...")
 
