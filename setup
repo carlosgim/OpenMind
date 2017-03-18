@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import sys
 import os.path as path
@@ -46,8 +48,6 @@ class kind_run(object):
 
             print(" Installing... ")
 
-            set_enviroment().__clean_out__()
-
             compile_code()
 
             print("Correctly instaled...")
@@ -57,10 +57,6 @@ class kind_run(object):
             print(" Running Test... ")
 
             set_enviroment().__clean_out__()
-
-            compile_code()
-
-            print("Correctly instaled...")
 
             self.test_path = os.getcwd() + "/test/run_test"
 
@@ -81,8 +77,6 @@ class kind_run(object):
         #    run_test().__test_kind__(self.gkind)
 
         elif (self.gkind == "3"):
-
-            print(" Cleaning folder...")
 
             set_enviroment().__clean_out__()
 
@@ -110,16 +104,32 @@ class compile_code(object):
 
     def __init__(self):
 
-        os.system("make")
-        os.system("make")
-        os.system("make")
-        os.system("make")
+        self.src = os.getcwd() 
 
-        filelist = [ f for f in os.listdir(".") if f.endswith(".mod") ]
+        self.build = self.src+"/build"
 
-        for f in filelist:
+        print("Build in:")
 
-            os.remove(f)
+        print(self.build)
+
+        if os.path.exists(self.build):
+
+            print("Cleaning Folder /build ")
+
+            shutil.rmtree(self.build)
+
+        os.mkdir(self.build)
+
+        os.chdir(self.build)
+
+        print("Running cmake configurations...")
+
+        os.system("cmake ..")
+
+        print("Running make installation...")
+
+        os.system("make")
+        
 
 class run_test(object):
 
@@ -143,7 +153,11 @@ class run_test(object):
 
         os.chdir(self.build_path)
 
-        os.system("NN_Kernel.exe")
+        print("wut?")
+
+        print(self.build_path)
+
+        os.system("./OpenMind.exe")
 
 class set_enviroment(object):
     """
@@ -158,7 +172,7 @@ class set_enviroment(object):
 
         test_path = os.getcwd() + "/test/run_test"
 
-        shutil.copy(os.getcwd()+"/bin/NN_Kernel.exe", test_path) 
+        shutil.copy(os.getcwd()+"/build/src/OpenMind.exe", test_path) 
   
     def __get_example__(self, kind):
 

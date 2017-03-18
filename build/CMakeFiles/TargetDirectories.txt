@@ -1,8 +1,0 @@
-/home/carlosgim/Documentos/OpenMind/build/CMakeFiles/edit_cache.dir
-/home/carlosgim/Documentos/OpenMind/build/CMakeFiles/rebuild_cache.dir
-/home/carlosgim/Documentos/OpenMind/build/src/CMakeFiles/rebuild_cache.dir
-/home/carlosgim/Documentos/OpenMind/build/src/CMakeFiles/edit_cache.dir
-/home/carlosgim/Documentos/OpenMind/build/src/CMakeFiles/OpenMind.dir
-/home/carlosgim/Documentos/OpenMind/build/src/mod/CMakeFiles/rebuild_cache.dir
-/home/carlosgim/Documentos/OpenMind/build/src/mod/CMakeFiles/edit_cache.dir
-/home/carlosgim/Documentos/OpenMind/build/src/mod/CMakeFiles/mod.dir

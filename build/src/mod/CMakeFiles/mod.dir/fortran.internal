@@ -1,9 +1,0 @@
-# The fortran modules provided by this target.
-provides
- mod_nn_train
- mod_open_input
- mod_save_ann
- mod_scan_basis
- mod_score_basis
- mod_score_bot
- mod_setup
