@@ -4,6 +4,10 @@
 This is a fast and simple (adaptable) algorithm for application in Data Science 
 projects. This code was implemented in modular shape.
 
+**Note:** Dear Windows user, if you want to compile this code you must read how 
+to work with cmake, otherwise we suggest try it on linux SO. We are working on 
+make a multi platform code.
+
 **If you'd like to contribute to OpenMind, be sure to review the [contribution
 guidelines](CONTRIBUTING.md).**
 
