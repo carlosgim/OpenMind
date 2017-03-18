@@ -14,14 +14,14 @@ tracking requests and bugs.
 
 ## Requirements
 
- 1. [make](https://www.gnu.org/software/make/)
+ 1. [cmake](https://cmake.org/)
  2. [gfortran](https://gcc.gnu.org/wiki/GFortranBinaries)
  3. [python 3.5](https://www.python.org/) - You can use 2.7 if you change the run_script.py file.
 
 ## Installation
 
 ```shell
-python setup.py
+./setup
 ```
 
 Where you have the follow options:
@@ -34,12 +34,12 @@ Where you have the follow options:
 
 ## Run arbitrary basis set
 
-After compile the code, you get the binary file NN_Kernel.exe. You can copy that file in whatever folder with the input file from example (test/example/*.inp)
+After compile the code, you get the binary file OpenMind.exe. You can copy that file in whatever folder with the input file from example (test/example/*.inp)
 
 Then you run in shell
 
 ```shell
-NN_kernel.exe
+OpenMind.exe
 ```
 
 ### Input file
